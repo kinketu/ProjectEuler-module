@@ -2,6 +2,7 @@
 # coding: utf-8
 
 from setuptools import setup, find_packages
+from distutils.core import setup
 from projecteuler import __author__, __version__, __license__
 
 setup(

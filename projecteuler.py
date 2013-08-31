@@ -110,7 +110,9 @@ def prime_factorization(n):
                 return result
 
 def divisors(n):
-    """Return a list of divisors."""
+    """
+    calculate the list of divisors
+    """
     numbers = []
     for i in range(1, n+1):
         if n % i == 0:
@@ -118,7 +120,9 @@ def divisors(n):
     return numbers
 
 def proper_divisors(n):
-    """Return a list of proper divisors."""
+    """
+    calculate the list of proper divisors
+    """
     numbers = []
     for i in range(1, n):
         if n % i == 0:
@@ -146,7 +150,8 @@ def count_divisors(n):
     return c
 
 def count_proper_divisors(n):
-    """count n's number of proper divisor numbers
+    """
+    count n's number of proper divisor numbers
     If n is 28, return 5 (1, 2, 4, 7, 14).
     """
     if n == 1:
@@ -192,7 +197,9 @@ def is_abundant(n):
         return False
 
 def alpha_number(alpha):
-    """Return a number of alphabet."""
+    """
+    calculate the number of alphabet
+    """
     if alpha.isupper() == False:
         num = ord(alpha) - 96
         return num
@@ -236,16 +243,19 @@ def permutations(L):
                       for t   in permutations(L[:i]+L[i+1:])]
 
 def num_split(num):
-    """Return a list of split numbers.
+    """
+    Return a list of split numbers.
     There are other ways to split number.
     get_digits function?
     >>>list(str(123))
-    >>>["1", "2", "3"]"""
+    >>>["1", "2", "3"]
+    """
     num = list(str(num))
     return [int(i) for i in num]
 
 def cont_frac(num, index):
-    """There are some bags in this function because of truncation error.
+    """
+    There are some bags in this function because of truncation error.
 
     example:
     >>>cont_frac(sqrt(2), 100)
@@ -260,7 +270,9 @@ def cont_frac(num, index):
     return b
 
 def cntfrac2float(fractions):
-    """Calculate continued fraction and return a float type number."""
+    """
+    calculate continued fraction and return a float type number
+    """
     f = 0
     n = len(fractions)-1
     while n > 0:
@@ -270,7 +282,9 @@ def cntfrac2float(fractions):
     return f + fractions[0]
 
 def cntfrac2frac(fractions):
-    """Calculate continued fraction and return a fraction."""
+    """
+    calculate continued fraction and return a fraction
+    """
     fractions = [Fraction(i) for i in fractions]
     f = Fraction(0)
     n = len(fractions)-1
@@ -282,8 +296,10 @@ def cntfrac2frac(fractions):
     return Fraction(f + fractions[0])
 
 def num_digits(num):
-    """Return the number of digits.
-    If num = 0, raise Num Domain Error."""
+    """
+    Return the number of digits.
+    If num = 0, raise Num Domain Error.
+    """
     if num == 0:
         return 1
     return int(log10(num)+1)
@@ -308,6 +324,9 @@ def sequence(side_length):
     return numbers
 
 def flatten(nested_list):
+    """
+    flat the nested list
+    """
     return list(chain.from_iterable(nested_list))
 
 def is_pandigital(n, s=9): n = str(n); return len(n) == s \
@@ -346,6 +365,9 @@ def time_func(func):
     print elapsed, "sec"
 
 def totient(x):
+    """
+    calculate euler's totient function
+    """
     t = x
     if x % 2 == 0:
         t /= 2
@@ -433,13 +455,15 @@ def general_pentagonals_below(end):
     return gen_pens
 
 def period_cntfrac_sqrt(num):
-    """Return the period of the continued fraction of square root.
+    """
+    Return the period of the continued fraction of square root.
     >>>cntfrac_sqrt(2)
     >>>1
     >>>cntfrac_sqrt(23)
     >>>4
     >>>cntfrac_sqrt(4)
-    >>>0"""
+    >>>0
+    """
     r = limit = int(sqrt(num))
     if limit * limit == num:
         return 0
@@ -451,7 +475,9 @@ def period_cntfrac_sqrt(num):
     return period
 
 def cntfrac_sqrt(num):
-    """Return the list of the continued fraction of square root."""
+    """
+    Return the list of the continued fraction of square root.
+    """
     a = limit = int(sqrt(num))
     if limit * limit == num:
         return []

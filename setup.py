@@ -6,7 +6,7 @@ from projecteuler import __author__, __version__, __license__
 
 setup(
         name = "projecteuler",
-        version = __version,
+        version = __version__,
         description = "Project Euler module",
         license = __license__,
         author = __author__,

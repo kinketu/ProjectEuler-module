@@ -467,5 +467,8 @@ def is_square(n):
     m = int(sqrt(n))
     return m * m == n
 
+def product(L):
+    return reduce(lambda x, y: x * y, L)
+
 if __name__ == '__main__':
     pass

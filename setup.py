@@ -7,7 +7,7 @@ from projecteuler import __author__, __version__, __license__
 setup(
         name = "projecteuler",
         version = __version,
-        description = "Project Euler module"
+        description = "Project Euler module",
         license = __license__,
         author = __author__,
         url = "https://github.com/kinketu/projecteuler.git"

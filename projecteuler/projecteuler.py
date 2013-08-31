@@ -314,7 +314,7 @@ def is_palindrome(string):
     """
     Return True if string is palindrome, otherwise return False.
     """
-    r_string = str_reverse(string)
+    r_string = string[::-1]
     cnt = 0
     while cnt < len(string):
         if string[cnt] == r_string[cnt]:

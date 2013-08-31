@@ -460,6 +460,12 @@ def cntfrac_sqrt(num):
         period += 1
     return lst
 
+def is_square(n):
+    """
+    Return True if integer n is square number, otherwise return False.
+    """
+    m = int(sqrt(n))
+    return m * m == n
 
 if __name__ == '__main__':
     pass

@@ -94,8 +94,9 @@ def num_reverse(num):
     return int(str(num)[::-1])
 
 def prime_factorization(n):
-    """If n is 28, return [2, 2, 7]
-    prime_factorization function"""
+    """
+    find which prime numbers multiply together to make the original number
+    """
     result = []
     for i in range(2, n+1):
         s = 0;

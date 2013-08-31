@@ -179,18 +179,27 @@ def sum_proper_divisors(n):
     return sum(proper_divisors(n))
 
 def is_perfect(n):
+    """
+    Returns True if integer n is perfect number, otherwise return False.
+    """
     if sum_proper_divisors(n) == n:
         return True
     else:
         return False
 
 def is_deficient(n):
+    """
+    Return True if integer n is deficient number, otherwise return False.
+    """
     if sum_proper_divisors(n) < n:
         return True
     else:
         return False
 
 def is_abundant(n):
+    """
+    Return True if integer n is abundant number, otherwise return False.
+    """
     if sum_proper_divisors(n) > n:
         return True
     else:

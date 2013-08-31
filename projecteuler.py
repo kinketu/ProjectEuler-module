@@ -387,18 +387,17 @@ def totient(x):
         t = t / x * (x - 1)
     return t
 
-def sub_partition(n, k):
-    if n < 0:
-        return 0
-    if n <= 1 or k == 1:
-        return 1
-    s = 0
-    for i in range(1, k+1):
-        s += sub_partition(n-i, i)
-    return s
-
 def partition_slow(n):
-    """This function is very slow If n is 100."""
+    """This function is very slow If n is over 100."""
+    def sub_partition(n, k):
+        if n < 0:
+            return 0
+        if n <= 1 or k == 1:
+            return 1
+        s = 0
+        for i in xrange(1, k+1):
+            s += sub_partition(n-i, i)
+        return s
     return sub_partition(n, n)
 
 def partition(target):

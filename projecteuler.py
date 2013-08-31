@@ -88,10 +88,6 @@ def fib_formula(n):
     return int(round(phi ** n / sqrt(5) + 1 / 2))
 
 def num_reverse(num):
-    num = str_reverse(str(num))
-    return int(num)
-
-def num_reverse(num):
     """
     return the reversed number of the integer
     """

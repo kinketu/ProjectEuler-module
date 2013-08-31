@@ -236,17 +236,6 @@ def reduce_triangle(to_reduce):
     del to_reduce[-1]
     return to_reduce
 
-def permutations(L):
-    """Generate and return a list of permutations alphabetically.
-    This program is very slow.
-    This program is slower than itertools.permutations.
-    Especially, length of the list L is over than 8."""
-    if L == []:
-        return [[]]
-    else:
-        return [[h]+t for i,h in enumerate(L)
-                      for t   in permutations(L[:i]+L[i+1:])]
-
 def num_split(num):
     """
     return the list of the split numbers of integer num
@@ -330,8 +319,11 @@ def flatten(nested_list):
     """
     return list(chain.from_iterable(nested_list))
 
-def is_pandigital(n, s=9): n = str(n); return len(n) == s \
-                               and not "1234567890"[:s].strip(n)
+def is_pandigital(n, s=9):
+    """
+    Return True if integer n is pandigital, otherwise return False.
+    """
+    n = str(n); return len(n) == s and not "1234567890"[:s].strip(n)
 
 def is_perm(a, b):
     return sorted(str(a)) == sorted(str(b))
@@ -363,6 +355,9 @@ def is_palindrome(string):
     return True
 
 def time_func(func):
+    """
+    measure the execution time of the function
+    """
     start = time.clock()
     func()
     elapsed = time.clock() - start

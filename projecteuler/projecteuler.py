@@ -29,30 +29,30 @@ def fib_recursive(n):
     calculate the nth Fibonacci number exactly without memorization
     O(1.68^n)
     """
-    fib1 = fib_recursive
+    fib = fib_recursive
     if n == 0:
         return 0
     elif n == 1:
         return 1
     else:
-        return fib1(n-1) + fib1(n-2)
+        return fib(n-1) + fib(n-2)
 
 def fib_recursive_faster(n):
     """
     calculate the nth Fibonacci number exactly without memorization
     This function is faster than fib_recursive
     """
-    fib2 = fib_recursive_faster
+    fib = fib_recursive_faster
     if n == 0:
         return 0
     elif n == 1:
         return 1
     elif n % 2 == 0:
         n = n / 2
-        return fib2(n) * (fib2(n) + 2 * fib2(n-1))
+        return fib(n) * (fib(n) + 2 * fib(n-1))
     else:
         n = (n-1) / 2
-        return fib2(n+1) ** 2 + fib2(n) ** 2
+        return fib(n+1) ** 2 + fib(n) ** 2
 
 def fib_linear(n):
     """

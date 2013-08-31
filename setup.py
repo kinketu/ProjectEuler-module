@@ -3,7 +3,7 @@
 
 from setuptools import setup, find_packages
 from distutils.core import setup
-from projecteuler import __author__, __version__, __license__, __date__
+from projecteuler import __author__, __version__, __license__
 
 setup(
         name = "projecteuler",
@@ -15,5 +15,4 @@ setup(
         keywords = "Project Euler module",
         packages = find_packages(),
         install_requires = [],
-        date = __date__
         )

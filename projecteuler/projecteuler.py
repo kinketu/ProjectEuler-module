@@ -14,7 +14,7 @@ def lcm(numbers):
     """
     This function is to return the LCM. 
     This function contains recurrence algorithm. 
-    So there are some algorithm faster than this function.
+    So maybe there are some algorithm faster than this function.
     """
     if len(numbers) == 2: 
         num0 = numbers[0] 
@@ -348,6 +348,9 @@ def gen_pandigitals(digit):
     return pandigitals
 
 def is_palindrome(string):
+    """
+    Return True if string is palindrome, otherwise return False.
+    """
     r_string = str_reverse(string)
     cnt = 0
     while cnt < len(string):

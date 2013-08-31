@@ -32,9 +32,10 @@ def memorize(f):
         return cache[x]
     return helper
 
+@memorize
 def fib_recursive(n):
     """
-    calculate the nth Fibonacci number exactly without memorization
+    calculate the nth Fibonacci number exactly with memorization
     O(1.68^n)
     """
     fib = fib_recursive
@@ -45,9 +46,10 @@ def fib_recursive(n):
     else:
         return fib(n-1) + fib(n-2)
 
+@memorize
 def fib_recursive_faster(n):
     """
-    calculate the nth Fibonacci number exactly without memorization
+    calculate the nth Fibonacci number exactly with memorization
     This function is faster than fib_recursive
     """
     fib = fib_recursive_faster

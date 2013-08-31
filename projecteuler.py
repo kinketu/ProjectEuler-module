@@ -14,7 +14,7 @@ def lcm(numbers):
     """
     This function is to return the LCM. 
     This function contains recurrence algorithm. 
-    So maybe slower the other algorithm.
+    So there are some algorithm faster than this function.
     """
     if len(numbers) == 2: 
         num0 = numbers[0] 
@@ -132,27 +132,23 @@ def proper_divisors(n):
 
 def count_divisors(n):
     """
-    Count the number of divisors
-    >>>count_divisors(28)
-    >>>6
-    the divisors of 28 are 1, 2, 4, 7, 14, 28
+    count n's number of divisor numbers
     """
     if n == 1:
         return 0
     m = int(sqrt(n))
     c = 1
-    if m*m == n:
+    if m * m == n:
         c += 1
         m -= 1
     for i in range(2, m+1):
-        if n%i == 0:
+        if n % i == 0:
             c += 2
     return c
 
 def count_proper_divisors(n):
     """
     count n's number of proper divisor numbers
-    If n is 28, return 5 (1, 2, 4, 7, 14).
     """
     if n == 1:
         return 0
@@ -253,11 +249,7 @@ def permutations(L):
 
 def num_split(num):
     """
-    Return a list of split numbers.
-    There are other ways to split number.
-    get_digits function?
-    >>>list(str(123))
-    >>>["1", "2", "3"]
+    return the list of the split numbers of integer num
     """
     num = list(str(num))
     return [int(i) for i in num]

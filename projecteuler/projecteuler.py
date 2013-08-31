@@ -105,7 +105,7 @@ def prime_factorization(n):
     find which prime numbers multiply together to make the original number
     """
     result = []
-    for i in range(2, n+1):
+    for i in xrange(2, n+1):
         s = 0;
         while n / float(i) == floor(n/float(i)):
             n = n / float(i)
@@ -118,20 +118,20 @@ def prime_factorization(n):
 
 def divisors(n):
     """
-    calculate the list of divisors
+    calculate the list of the divisors of an integer
     """
     numbers = []
-    for i in range(1, n+1):
+    for i in xrange(1, n+1):
         if n % i == 0:
             numbers.append(i)
     return numbers
 
 def proper_divisors(n):
     """
-    calculate the list of proper divisors
+    calculate the list of the proper divisors of an integer
     """
     numbers = []
-    for i in range(1, n):
+    for i in xrange(1, n):
         if n % i == 0:
             numbers.append(i)
             
@@ -148,7 +148,7 @@ def count_divisors(n):
     if m * m == n:
         c += 1
         m -= 1
-    for i in range(2, m+1):
+    for i in xrange(2, m+1):
         if n % i == 0:
             c += 2
     return c
@@ -161,11 +161,11 @@ def count_proper_divisors(n):
         return 0
     m = int(sqrt(n))
     c = 1
-    if m*m == n:
+    if m * m == n:
         c += 1
         m -= 1
-    for i in range(2, m+1):
-        if n%i == 0:
+    for i in xrange(2, m+1):
+        if n % i == 0:
             c += 2
     return c
 
@@ -176,9 +176,15 @@ def count_proper_divisors2(n):
 """
 
 def sum_divisors(n):
+    """
+    calculate the sum of divisors
+    """
     return sum(proper_divisors(n)) + n
 
 def sum_proper_divisors(n):
+    """
+    calculate the sum of proper divisors
+    """
     return sum(proper_divisors(n))
 
 def is_perfect(n):
@@ -249,48 +255,6 @@ def num_split(num):
     """
     num = list(str(num))
     return [int(i) for i in num]
-
-def cont_frac(num, index):
-    """
-    There are some bags in this function because of truncation error.
-
-    example:
-    >>>cont_frac(sqrt(2), 100)
-    >[1, 2, 2, ..., 1, 1, ..., 1809, ...]
-    """
-    b = []
-    b.append(int(num))
-    for i in xrange(1, index):
-        num = 1 / (num - b[i-1])
-        #print num
-        b.append(int(num))
-    return b
-
-def cntfrac2float(fractions):
-    """
-    calculate continued fraction and return a float type number
-    """
-    f = 0
-    n = len(fractions)-1
-    while n > 0:
-        f = 1.0 / (fractions[n] + f)
-        #print f
-        n -= 1
-    return f + fractions[0]
-
-def cntfrac2frac(fractions):
-    """
-    calculate continued fraction and return a fraction
-    """
-    fractions = [Fraction(i) for i in fractions]
-    f = Fraction(0)
-    n = len(fractions)-1
-    while n > 0:
-        f = Fraction(Fraction(1) / (fractions[n] + f))
-        #print f
-        #print type(f)
-        n -= 1
-    return Fraction(f + fractions[0])
 
 def num_digits(num):
     """

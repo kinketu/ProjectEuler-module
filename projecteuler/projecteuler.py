@@ -9,8 +9,7 @@ from decimal import Decimal
 
 def lcm(numbers): 
     """
-    This function is to return the LCM. 
-    This function contains recurrence algorithm. 
+    This function is to return the LCM with recursive algorithm. 
     So maybe there are some algorithm faster than this function.
     """
     if len(numbers) == 2: 

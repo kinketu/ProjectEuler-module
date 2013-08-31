@@ -1,4 +1,4 @@
-projecteuler
+Project Euler
 ============
 Author: kinketu
 

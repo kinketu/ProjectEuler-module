@@ -1,8 +1,5 @@
 # ProjectEuler module
 
-__author__ = "kinketu"
-__date__ = "2013/08/31"
-__version__ = "0.1"
 
 from math import sqrt, floor, log10
 from fractions import Fraction, gcd

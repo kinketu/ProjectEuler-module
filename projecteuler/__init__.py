@@ -2,7 +2,7 @@
 # coding: utf-8
 
 from projecteuler import *
-from cntfrac import *
+from cntfrac import CFraction
 
 __author__ = "kinketu"
 __version__ = "0.1"

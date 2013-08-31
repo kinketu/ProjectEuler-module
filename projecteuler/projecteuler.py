@@ -24,6 +24,14 @@ def lcm(numbers):
         for i in range(len(numbers)): 
             return lcm([numbers[0], lcm(numbers[1:])]) 
 
+def memorize(f):
+    cache = {}
+    def helper(x):
+        if x not in cache:
+            cache[x] = f(x)
+        return cache[x]
+    return helper
+
 def fib_recursive(n):
     """
     calculate the nth Fibonacci number exactly without memorization

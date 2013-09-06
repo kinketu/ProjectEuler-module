@@ -1,4 +1,5 @@
 # ProjectEuler module
+# Python 2.7.5
 
 
 from math import sqrt, floor, log10

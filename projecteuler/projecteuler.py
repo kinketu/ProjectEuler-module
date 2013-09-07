@@ -397,9 +397,9 @@ def is_square(n):
 def product(L):
     return reduce(lambda x, y: x * y, L)
 
-def is_integer(n):
+def is_integer(x):
     """
-    Return True if number n is integer, otherwise return False.
+    Return True if number x is integer, otherwise return False.
     """
     if isinstance(x, float):
         return x == int(x)

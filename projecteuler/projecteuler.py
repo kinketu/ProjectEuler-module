@@ -402,7 +402,7 @@ def is_integer(n):
     Return True if number n is integer, otherwise return False.
     """
     if isinstance(x, float):
-        return if x == int(x)
+        return x == int(x)
     else:
         raise TypeError, "Input float"
 

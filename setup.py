@@ -11,7 +11,7 @@ setup(
         description = "Project Euler module",
         license = __license__,
         author = __author__,
-        url = "https://github.com/kinketu/projecteuler.git",
+        url = "https://github.com/kinketu/ProjectEuler-module.git",
         keywords = "Project Euler module",
         packages = find_packages(),
         install_requires = [],

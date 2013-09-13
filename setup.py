@@ -6,7 +6,7 @@ from distutils.core import setup
 from projecteuler import __author__, __version__, __license__
 
 setup(
-        name = "projecteuler",
+        name = "ProjectEuler-module",
         version = __version__,
         description = "Project Euler module",
         license = __license__,

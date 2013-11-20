@@ -10,8 +10,8 @@ from decimal import Decimal
 
 def lcm(numbers): 
     """
-    This function is to return the LCM with recursive algorithm. 
-    So maybe there are some algorithm faster than this function.
+    return the LCM with recursive algorithm
+    Maybe there are some algorithm faster than this function.
     """
     if len(numbers) == 2: 
         num0 = numbers[0] 
@@ -116,7 +116,7 @@ def sum_proper_divisors(n):
 
 def is_perfect(n):
     """
-    Returns True if integer n is perfect number, otherwise return False.
+    return True if integer n is perfect number, otherwise return False
     """
     if sum_proper_divisors(n) == n:
         return True
@@ -125,7 +125,7 @@ def is_perfect(n):
 
 def is_deficient(n):
     """
-    Return True if integer n is deficient number, otherwise return False.
+    return True if integer n is deficient number, otherwise return False
     """
     if sum_proper_divisors(n) < n:
         return True
@@ -134,7 +134,7 @@ def is_deficient(n):
 
 def is_abundant(n):
     """
-    Return True if integer n is abundant number, otherwise return False.
+    return True if integer n is abundant number, otherwise return False
     """
     if sum_proper_divisors(n) > n:
         return True
@@ -154,7 +154,7 @@ def alpha_number(alpha):
 
 def reduce_triangle(to_reduce):
     """
-    Reduce 'to_reduce' in place by rolling up the maximum path info one row.
+    reduce 'to_reduce' in place by rolling up the maximum path info one row
 
     >>> test = [[3,], \
             [7, 5], \
@@ -196,8 +196,10 @@ def create_corners(side_length):
     return sequence(side_length)
 
 def sequence(side_length):
-    """Return a list of numbers
-    cf. problem 28, 58"""
+    """
+    Return a list of numbers
+    cf. problem 28, 58
+    """
     index = side_length
     numbers = []
     tmp1 = (index -1 ) / 2
@@ -213,13 +215,13 @@ def sequence(side_length):
 
 def flatten(nested_list):
     """
-    flat the nested list
+    flat the nested list(one nasted list?)
     """
     return list(chain.from_iterable(nested_list))
 
 def is_pandigital(n, s=9):
     """
-    Return True if integer n is pandigital, otherwise return False.
+    return True if integer n is pandigital, otherwise return False
     """
     n = str(n); return len(n) == s and not "1234567890"[:s].strip(n)
 
@@ -227,8 +229,10 @@ def is_perm(a, b):
     return sorted(str(a)) == sorted(str(b))
 
 def gen_pandigitals(digit):
-    """This function is very slow. expecially digit is over 5.
-    If digit is 9, this function return Memmory Error."""
+    """
+    This function is very slow. expecially digit is over 5.
+    If digit is 9, this function return Memmory Error.
+    """
     pandigitals = []
     below = 10 ** (digit-1)
     above = 10 * below
@@ -239,7 +243,7 @@ def gen_pandigitals(digit):
 
 def is_palindrome(string):
     """
-    Return True if string is palindrome, otherwise return False.
+    return True if string is palindrome, otherwise return False
     """
     r_string = string[::-1]
     cnt = 0
@@ -284,7 +288,9 @@ def totient(x):
     return t
 
 def partition_slow(n):
-    """This function is very slow If n is over 100."""
+    """
+    This function is very slow If n is over 100.
+    """
     def sub_partition(n, k):
         if n < 0:
             return 0
@@ -352,7 +358,7 @@ def general_pentagonals_below(end):
 
 def period_cntfrac_sqrt(num):
     """
-    Return the period of the continued fraction of square root.
+    return the period of the continued fraction of square root
     >>>cntfrac_sqrt(2)
     >>>1
     >>>cntfrac_sqrt(23)
@@ -372,7 +378,7 @@ def period_cntfrac_sqrt(num):
 
 def cntfrac_sqrt(num):
     """
-    Return the list of the continued fraction of square root.
+    return the list of the continued fraction of square root
     """
     a = limit = int(sqrt(num))
     if limit * limit == num:
@@ -389,7 +395,7 @@ def cntfrac_sqrt(num):
 
 def is_square(n):
     """
-    Return True if integer n is square number, otherwise return False.
+    return True if integer n is square number, otherwise return False
     """
     m = int(sqrt(n))
     return m * m == n
@@ -399,7 +405,7 @@ def product(L):
 
 def is_integer(x):
     """
-    Return True if number x is integer, otherwise return False.
+    return True if number x is integer, otherwise return False
     """
     if isinstance(x, float):
         return x == int(x)

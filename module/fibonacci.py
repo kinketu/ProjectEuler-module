@@ -52,7 +52,9 @@ def fib_linear(n):
     return a
 
 def fib_matrix(n):
-    """calculate the nth Fibonacci number exactly without memorization"""
+    """
+    calculate the nth Fibonacci number exactly without memorization
+    """
     def mul(A, B):
         a, b, c = A
         d, e, f = B
@@ -71,7 +73,9 @@ def fib_matrix(n):
     return pow((1, 1, 0), n-1)[0]
 
 def fib_formula(n):
-    """calculate the nth Fibonacci number approximately"""
+    """
+    calculate the nth Fibonacci number approximately
+    """
     phi = (1 + sqrt(5)) / 2
     return int(round(phi ** n / sqrt(5) + 1 / 2))
 

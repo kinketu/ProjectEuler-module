@@ -1,5 +1,5 @@
-Project Euler
-============
+ProjectEuler-module
+===================
 Author: kinketu
 
 My module to Project Euler

@@ -7,11 +7,11 @@ My module to Project Euler
 License
 -------
 
-Distributed under the [MIT License][MIT].
+Distributed under the [MIT License][MIT]
 
 How to install this module
 --------------------------
-Install with the following command.
+Install with the following command
 
     pip install git+https://github.com/kinketu/ProjectEuler-module.git
 
